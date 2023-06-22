@@ -5,11 +5,11 @@ import { Widget, WidgetTypes } from '../../types/widgetTypes';
 
 import { BarChart, ChordChart, LineChart, PieChart, RadialBar, SwarmPlot } from './DashBoardComponents/index';
 
+import styles from './DashBoard.module.scss';
+
 const DashBoard = (): JSX.Element => {
   const currentWidget = useCallback((widget: Widget, index: number): JSX.Element => {
     const { type } = widget;
-
-    console.log(type);
 
     switch (type) {
       case WidgetTypes.PIE_CHART:
@@ -24,17 +24,18 @@ const DashBoard = (): JSX.Element => {
         return <RadialBar data={widgets[index]} />;
       case WidgetTypes.CHORD_CHART:
         return <ChordChart data={widgets[index]} />;
-
       default:
         return <div />;
     }
   }, []);
 
   return (
-    <div>
+    <div className={styles.dashBoard}>
       {widgets.map(
         (widget, index): JSX.Element => (
-          <div key={widget.id}>{currentWidget(widget, index)}</div>
+          <div key={widget.id} className={styles.widgetContainer}>
+            {currentWidget(widget, index)}
+          </div>
         )
       )}
     </div>

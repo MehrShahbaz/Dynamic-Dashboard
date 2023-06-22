@@ -3,10 +3,16 @@ import { ResponsiveChord } from '@nivo/chord';
 import { chordChartData } from '../../../../componentsData/index';
 import { WidgetProps } from '../../../../types/widgetTypes';
 
-import styles from './ChordChart.module.scss';
+import styles from '../../DashBoard.module.scss';
 
 const ChordChart = ({ data }: WidgetProps): JSX.Element => (
-  <div style={{ height: `${data.size}` }} className={styles.chordChart}>
+  <div style={{ height: `${data.size}` }} className={styles.container}>
+    {data.title && (
+      <div className={styles.titleContainer}>
+        <div className={styles.title}>{data.title}</div>
+      </div>
+    )}
+
     <ResponsiveChord
       data={chordChartData}
       keys={['John', 'Raoul', 'Jane', 'Marcel', 'Ibrahim']}

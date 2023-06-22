@@ -7,6 +7,7 @@ export const widgets: Widget[] = [
     position: '1 / 1 / span 2',
     priority: 1,
     size: '300px',
+    title: 'Pie Chart',
     type: 'pieChart',
   },
   {
@@ -15,6 +16,7 @@ export const widgets: Widget[] = [
     position: '2 / 2',
     priority: 2,
     size: '300px',
+    title: 'Line Chart',
     type: 'chartLine',
   },
   {
@@ -23,6 +25,7 @@ export const widgets: Widget[] = [
     position: '2 / 2',
     priority: 2,
     size: '300px',
+    title: 'Bar Chart',
     type: 'barChart',
   },
   {
@@ -31,6 +34,7 @@ export const widgets: Widget[] = [
     position: '2 / 2',
     priority: 2,
     size: '300px',
+    title: 'Swarm Plot',
     type: 'swarmPlot',
   },
   {
@@ -39,6 +43,7 @@ export const widgets: Widget[] = [
     position: '2 / 2',
     priority: 2,
     size: '300px',
+    title: 'Radial Bar',
     type: 'radialBar',
   },
   {

@@ -3,10 +3,16 @@ import { ResponsivePie } from '@nivo/pie';
 import { chartPieData } from '../../../../componentsData';
 import { WidgetProps } from '../../../../types/widgetTypes';
 
-import styles from './PieChart.module.scss';
+import styles from '../../DashBoard.module.scss';
 
 const PieChart = ({ data }: WidgetProps): JSX.Element => (
-  <div style={{ height: `${data.size}` }} className={styles.chartPie}>
+  <div style={{ height: `${data.size}` }} className={styles.container}>
+    {data.title && (
+      <div className={styles.titleContainer}>
+        <div className={styles.title}>{data.title}</div>
+      </div>
+    )}
+
     <ResponsivePie
       data={chartPieData}
       margin={{ top: 40, right: 80, bottom: 80, left: 80 }}

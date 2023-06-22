@@ -3,10 +3,16 @@ import { ResponsiveRadialBar } from '@nivo/radial-bar';
 import { radialBarData } from '../../../../componentsData/index';
 import { WidgetProps } from '../../../../types/widgetTypes';
 
-import styles from './RadialBar.module.scss';
+import styles from '../../DashBoard.module.scss';
 
 const RadialBar = ({ data }: WidgetProps): JSX.Element => (
-  <div style={{ height: `${data.size}` }} className={styles.radialBar}>
+  <div style={{ height: `${data.size}` }} className={styles.container}>
+    {data.title && (
+      <div className={styles.titleContainer}>
+        <div className={styles.title}>{data.title}</div>
+      </div>
+    )}
+
     <ResponsiveRadialBar
       data={radialBarData}
       valueFormat=">-.2f"

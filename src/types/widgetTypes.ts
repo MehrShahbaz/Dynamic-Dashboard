@@ -11,6 +11,7 @@ export enum WidgetTypes {
 
 export interface Widget {
   id: string;
+  title?: string;
   priority: number;
   type: WidgetType;
   order: number;

@@ -3,10 +3,16 @@ import { ResponsiveBar } from '@nivo/bar';
 import { barChartData } from '../../../../componentsData/index';
 import { WidgetProps } from '../../../../types/widgetTypes';
 
-import styles from './BarChart.module.scss';
+import styles from '../../DashBoard.module.scss';
 
 const BarChart = ({ data }: WidgetProps): JSX.Element => (
-  <div style={{ height: `${data.size}` }} className={styles.barChart}>
+  <div style={{ height: `${data.size}` }} className={styles.container}>
+    {data.title && (
+      <div className={styles.titleContainer}>
+        <div className={styles.title}>{data.title}</div>
+      </div>
+    )}
+
     <ResponsiveBar
       data={barChartData}
       keys={['hot dog', 'burger', 'sandwich', 'kebab', 'fries', 'donut']}

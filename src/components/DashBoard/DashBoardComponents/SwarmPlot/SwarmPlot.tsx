@@ -3,10 +3,16 @@ import { ResponsiveSwarmPlot } from '@nivo/swarmplot';
 import { swarmPlotData } from '../../../../componentsData/index';
 import { WidgetProps } from '../../../../types/widgetTypes';
 
-import styles from './SwarmPlot.module.scss';
+import styles from '../../DashBoard.module.scss';
 
 const SwarmPlot = ({ data }: WidgetProps): JSX.Element => (
-  <div style={{ height: `${data.size}` }} className={styles.swarmPlot}>
+  <div style={{ height: `${data.size}` }} className={styles.container}>
+    {data.title && (
+      <div className={styles.titleContainer}>
+        <div className={styles.title}>{data.title}</div>
+      </div>
+    )}
+
     <ResponsiveSwarmPlot
       data={swarmPlotData}
       groups={['group A', 'group B', 'group C']}

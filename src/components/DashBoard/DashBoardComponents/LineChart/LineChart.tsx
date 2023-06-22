@@ -3,10 +3,16 @@ import { ResponsiveLine } from '@nivo/line';
 import { lineChartData } from '../../../../componentsData/index';
 import { WidgetProps } from '../../../../types/widgetTypes';
 
-import styles from './LineChart.module.scss';
+import styles from '../../DashBoard.module.scss';
 
 const LineChart = ({ data }: WidgetProps): JSX.Element => (
-  <div style={{ height: `${data.size}` }} className={styles.lineChart}>
+  <div style={{ height: `${data.size}` }} className={styles.container}>
+    {data.title && (
+      <div className={styles.titleContainer}>
+        <div className={styles.title}>{data.title}</div>
+      </div>
+    )}
+
     <ResponsiveLine
       data={lineChartData}
       margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
