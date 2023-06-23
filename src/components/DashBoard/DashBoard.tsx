@@ -20,26 +20,26 @@ import {
 import styles from './DashBoard.module.scss';
 
 const DashBoard = (): JSX.Element => {
-  const currentWidget = useCallback((widget: Widget, index: number): JSX.Element => {
+  const currentWidget = useCallback((widget: Widget): JSX.Element => {
     const { WidgetType } = widget;
 
     switch (WidgetType) {
       case WidgetTypes.PIE_CHART:
-        return <PieChart data={widgets[index]} />;
+        return <PieChart data={widget} />;
       case WidgetTypes.CHART_LINE:
-        return <LineChart data={widgets[index]} />;
+        return <LineChart data={widget} />;
       case WidgetTypes.BAR_CHART:
-        return <BarChart data={widgets[index]} />;
+        return <BarChart data={widget} />;
       case WidgetTypes.SWARM_PLOT:
-        return <SwarmPlot data={widgets[index]} />;
+        return <SwarmPlot data={widget} />;
       case WidgetTypes.RADIAL_BAR:
-        return <RadialBar data={widgets[index]} />;
+        return <RadialBar data={widget} />;
       case WidgetTypes.CHORD_CHART:
-        return <ChordChart data={widgets[index]} />;
+        return <ChordChart data={widget} />;
       case WidgetTypes.PROGRESS_BAR:
-        return <ProgressBar data={widgets[index]} />;
+        return <ProgressBar data={widget} />;
       case WidgetTypes.DESCRIPTION_CARD:
-        return <DescriptionCard data={widgets[index]} />;
+        return <DescriptionCard data={widget} />;
       default:
         return <div />;
     }
@@ -53,17 +53,17 @@ const DashBoard = (): JSX.Element => {
 
           if (colWidgets.length > 0) {
             return (
-              <Row>
+              <Row key={`row-${index}`}>
                 {colWidgets.map(
                   (widget): JSX.Element => (
-                    <Col>{currentWidget(widget, index)}</Col>
+                    <Col key={widget.id}>{currentWidget(widget)}</Col>
                   )
                 )}
               </Row>
             );
           }
 
-          return <div />;
+          return <div key={`row-${index}`} />;
         })}
       </div>
     </Container>

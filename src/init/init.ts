@@ -4,7 +4,7 @@ export const widgets: Widget[] = [
   {
     id: 'widget8',
     order: 2,
-    position: { row: 8, col: 1 },
+    position: { row: 0, col: 1 },
     priority: 1,
     size: '300px',
     title: 'Repairs',
@@ -13,7 +13,7 @@ export const widgets: Widget[] = [
   {
     id: 'widget9',
     order: 2,
-    position: { row: 8, col: 2 },
+    position: { row: 0, col: 2 },
     priority: 1,
     size: '300px',
     title: 'Network Unlocks',
@@ -22,7 +22,7 @@ export const widgets: Widget[] = [
   {
     id: 'widget10',
     order: 2,
-    position: { row: 8, col: 3 },
+    position: { row: 0, col: 3 },
     priority: 1,
     size: '300px',
     title: 'Accessories & Parts',
@@ -31,7 +31,7 @@ export const widgets: Widget[] = [
   {
     id: 'widget11',
     order: 2,
-    position: { row: 8, col: 4 },
+    position: { row: 0, col: 4 },
     priority: 1,
     size: '300px',
     title: 'Trade In',
