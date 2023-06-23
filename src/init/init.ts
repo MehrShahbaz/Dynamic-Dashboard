@@ -94,7 +94,7 @@ export const widgets: Widget[] = [
   {
     id: 'widget7',
     order: 2,
-    position: { row: 1, col: 1 },
+    position: { row: 4, col: 1 },
     priority: 1,
     size: '300px',
     title: 'Progress Bar',
