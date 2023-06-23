@@ -53,6 +53,7 @@ export const widgets: Widget[] = [
     priority: 2,
     size: '300px',
     type: 'chordChart',
+    title: 'Chord Chart',
   },
   {
     id: 'widget7',
