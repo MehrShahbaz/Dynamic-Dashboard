@@ -21,7 +21,6 @@ export interface Widget {
   WidgetType: WidgetTypes;
   order: number;
   position: WidgetPosition;
-  size: string;
 }
 
 export interface WidgetProps {

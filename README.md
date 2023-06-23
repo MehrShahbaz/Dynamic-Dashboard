@@ -1,10 +1,12 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Getting Started with Dynamic Dashboard
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `yarn`
+
+To install required packages
 
 ### `yarn start`
 
@@ -17,30 +19,53 @@ You will also see any lint errors in the console.
 ### `yarn test`
 
 Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+## Usage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The Dashboard component accepts an array of widgets as its data input which is intialized in `src/init/init`.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Each widget object should have the following properties:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- id: The unique identifier of the widget.
+- title: The title or label of the widget. (optional)
+- priority: The priority value of the widget. Widgets with lower priority values will be rendered first.
+- WidgetType: The type of the widget. Possible values are defined in the WidgetTypes enum.
+- position: An object specifying the row and column position of the widget.
 
-### `yarn eject`
+#### Widget Types
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- PIE_CHART
+- CHART_LINE
+- BAR_CHART
+- SWARM_PLOT
+- RADIAL_BAR
+- CHORD_CHART
+- PROGRESS_BAR
+- DESCRIPTION_CARD
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Position
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+The Position attribute accepts an object each object should have the following properties:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- row (number)
+- col (number)
 
-## Learn More
+## Libraries Used
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The Dashboard Component utilizes the following libraries:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **@nivo/bar** (version 0.83.0): A powerful and customizable bar chart library for React.
+- **@nivo/chord** (version 0.83.0): A React library for creating chord diagrams.
+- **@nivo/core** (version 0.83.0): Core components and utilities used by the Nivo libraries.
+- **@nivo/line** (version 0.83.0): A React library for creating line charts.
+- **@nivo/pie** (version 0.83.0): A React library for creating pie charts.
+- **@nivo/radial-bar** (version 0.83.0): A React library for creating radial bar charts.
+- **@nivo/swarmplot** (version 0.83.0): A React library for creating swarm plots.
+- **react-bootstrap** (version 2.7.4): Bootstrap components built with React.
+
+Linting Dependencies:
+
+- **eslint-config-prettier** (version 8.8.0): ESLint configuration for Prettier integration.
+- **eslint-plugin-prettier** (version 4.2.1): ESLint plugin for Prettier formatting.
+- **eslint-plugin-simple-import-sort** (version 10.0.0): ESLint plugin for sorting imports.
+- **prettier** (version 2.8.8): Opinionated code formatter to enforce consistent code style.
