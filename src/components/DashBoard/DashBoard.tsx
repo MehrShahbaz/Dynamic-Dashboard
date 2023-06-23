@@ -1,4 +1,7 @@
 import { useCallback } from 'react';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 
 import { widgets } from '../../init/init';
 import { Widget, WidgetTypes } from '../../types/widgetTypes';
@@ -42,15 +45,19 @@ const DashBoard = (): JSX.Element => {
   }, []);
 
   return (
-    <div className={styles.dashBoard}>
-      {widgets.map(
-        (widget, index): JSX.Element => (
-          <div key={widget.id} className={styles.widgetContainer}>
-            {currentWidget(widget, index)}
-          </div>
-        )
-      )}
-    </div>
+    <Container>
+      <div className={styles.dashBoard}>
+        <Row>
+          {widgets.map(
+            (widget, index): JSX.Element => (
+              <Col key={widget.id} className={styles.widgetContainer}>
+                {currentWidget(widget, index)}
+              </Col>
+            )
+          )}
+        </Row>
+      </div>
+    </Container>
   );
 };
 
