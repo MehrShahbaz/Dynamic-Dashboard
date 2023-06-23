@@ -1,0 +1,16 @@
+.rootConatiner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.headingContainer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #444444;
+}

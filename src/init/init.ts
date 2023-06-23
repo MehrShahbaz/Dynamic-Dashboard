@@ -60,6 +60,7 @@ export const widgets: Widget[] = [
     position: '2 / 2',
     priority: 1,
     size: '300px',
+    title: 'Progress Bar',
     type: 'progressBar',
   },
 ];

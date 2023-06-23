@@ -2,7 +2,7 @@ import { useCallback } from 'react';
 
 import { widgets } from '../../init/init';
 import { Widget, WidgetTypes } from '../../types/widgetTypes';
-import { BarChart, ChordChart, LineChart, PieChart, RadialBar, SwarmPlot } from '../shared/index';
+import { BarChart, ChordChart, LineChart, PieChart, ProgressBar, RadialBar, SwarmPlot } from '../shared/index';
 
 import styles from './DashBoard.module.scss';
 
@@ -23,6 +23,8 @@ const DashBoard = (): JSX.Element => {
         return <RadialBar data={widgets[index]} />;
       case WidgetTypes.CHORD_CHART:
         return <ChordChart data={widgets[index]} />;
+      case WidgetTypes.PROGRESS_BAR:
+        return <ProgressBar data={widgets[index]} />;
       default:
         return <div />;
     }
