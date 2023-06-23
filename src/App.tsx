@@ -1,10 +1,10 @@
-import DashBoard from './components/DashBoard/DashBoard';
+import HomePage from './screens/Home';
 
 import './App.scss';
 
 const App = (): JSX.Element => (
   <div className="App">
-    <DashBoard />
+    <HomePage />
   </div>
 );
 

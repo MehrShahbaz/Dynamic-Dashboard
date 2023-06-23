@@ -16,7 +16,6 @@ const SwarmPlot = ({ data }: WidgetProps): JSX.Element => (
     <ResponsiveSwarmPlot
       data={swarmPlotData}
       groups={['group A', 'group B', 'group C']}
-      // identity="id"
       value="price"
       valueFormat="$.2f"
       valueScale={{ type: 'linear', min: 0, max: 500, reverse: false }}
@@ -34,43 +33,7 @@ const SwarmPlot = ({ data }: WidgetProps): JSX.Element => (
           ['opacity', 0.5],
         ],
       }}
-      margin={{ top: 80, right: 100, bottom: 80, left: 100 }}
-      // axisTop={{
-      //   orient: 'top',
-      //   tickSize: 10,
-      //   tickPadding: 5,
-      //   tickRotation: 0,
-      //   legend: 'group if vertical, price if horizontal',
-      //   legendPosition: 'middle',
-      //   legendOffset: -46,
-      // }}
-      // axisRight={{
-      //   orient: 'right',
-      //   tickSize: 10,
-      //   tickPadding: 5,
-      //   tickRotation: 0,
-      //   legend: 'price if vertical, group if horizontal',
-      //   legendPosition: 'middle',
-      //   legendOffset: 76,
-      // }}
-      // axisBottom={{
-      //   orient: 'bottom',
-      //   tickSize: 10,
-      //   tickPadding: 5,
-      //   tickRotation: 0,
-      //   legend: 'group if vertical, price if horizontal',
-      //   legendPosition: 'middle',
-      //   legendOffset: 46,
-      // }}
-      // axisLeft={{
-      //   orient: 'left',
-      //   tickSize: 10,
-      //   tickPadding: 5,
-      //   tickRotation: 0,
-      //   legend: 'price if vertical, group if horizontal',
-      //   legendPosition: 'middle',
-      //   legendOffset: -76,
-      // }}
+      margin={{ top: 50, right: 100, bottom: 10, left: 100 }}
     />
   </div>
 );
