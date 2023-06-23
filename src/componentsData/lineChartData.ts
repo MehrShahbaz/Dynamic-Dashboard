@@ -54,60 +54,6 @@ export const lineChartData = [
     ],
   },
   {
-    id: 'france',
-    color: 'hsl(320, 70%, 50%)',
-    data: [
-      {
-        x: 'plane',
-        y: 89,
-      },
-      {
-        x: 'helicopter',
-        y: 57,
-      },
-      {
-        x: 'boat',
-        y: 28,
-      },
-      {
-        x: 'train',
-        y: 190,
-      },
-      {
-        x: 'subway',
-        y: 273,
-      },
-      {
-        x: 'bus',
-        y: 208,
-      },
-      {
-        x: 'car',
-        y: 109,
-      },
-      {
-        x: 'moto',
-        y: 23,
-      },
-      {
-        x: 'bicycle',
-        y: 17,
-      },
-      {
-        x: 'horse',
-        y: 90,
-      },
-      {
-        x: 'skateboard',
-        y: 72,
-      },
-      {
-        x: 'others',
-        y: 138,
-      },
-    ],
-  },
-  {
     id: 'us',
     color: 'hsl(174, 70%, 50%)',
     data: [
@@ -212,60 +158,6 @@ export const lineChartData = [
       {
         x: 'others',
         y: 176,
-      },
-    ],
-  },
-  {
-    id: 'norway',
-    color: 'hsl(161, 70%, 50%)',
-    data: [
-      {
-        x: 'plane',
-        y: 92,
-      },
-      {
-        x: 'helicopter',
-        y: 104,
-      },
-      {
-        x: 'boat',
-        y: 30,
-      },
-      {
-        x: 'train',
-        y: 264,
-      },
-      {
-        x: 'subway',
-        y: 34,
-      },
-      {
-        x: 'bus',
-        y: 280,
-      },
-      {
-        x: 'car',
-        y: 70,
-      },
-      {
-        x: 'moto',
-        y: 125,
-      },
-      {
-        x: 'bicycle',
-        y: 162,
-      },
-      {
-        x: 'horse',
-        y: 8,
-      },
-      {
-        x: 'skateboard',
-        y: 199,
-      },
-      {
-        x: 'others',
-        y: 41,
       },
     ],
   },

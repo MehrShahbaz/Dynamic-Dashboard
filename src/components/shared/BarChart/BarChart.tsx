@@ -1,9 +1,9 @@
 import { ResponsiveBar } from '@nivo/bar';
 
-import { barChartData } from '../../../../componentsData/index';
-import { WidgetProps } from '../../../../types/widgetTypes';
+import { barChartData } from '../../../componentsData/index';
+import { WidgetProps } from '../../../types/widgetTypes';
 
-import styles from '../../DashBoard.module.scss';
+import styles from '../sharedStyle.module.scss';
 
 const BarChart = ({ data }: WidgetProps): JSX.Element => (
   <div style={{ height: `${data.size}` }} className={styles.container}>

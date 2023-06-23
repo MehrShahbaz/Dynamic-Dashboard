@@ -1,9 +1,9 @@
 import { ResponsiveChord } from '@nivo/chord';
 
-import { chordChartData } from '../../../../componentsData/index';
-import { WidgetProps } from '../../../../types/widgetTypes';
+import { chordChartData } from '../../../componentsData/index';
+import { WidgetProps } from '../../../types/widgetTypes';
 
-import styles from '../../DashBoard.module.scss';
+import styles from '../sharedStyle.module.scss';
 
 const ChordChart = ({ data }: WidgetProps): JSX.Element => (
   <div style={{ height: `${data.size}` }} className={styles.container}>

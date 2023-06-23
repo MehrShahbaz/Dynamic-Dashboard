@@ -54,4 +54,12 @@ export const widgets: Widget[] = [
     size: '300px',
     type: 'chordChart',
   },
+  {
+    id: 'widget7',
+    order: 2,
+    position: '2 / 2',
+    priority: 1,
+    size: '300px',
+    type: 'progressBar',
+  },
 ];

@@ -2,8 +2,7 @@ import { useCallback } from 'react';
 
 import { widgets } from '../../init/init';
 import { Widget, WidgetTypes } from '../../types/widgetTypes';
-
-import { BarChart, ChordChart, LineChart, PieChart, RadialBar, SwarmPlot } from './DashBoardComponents/index';
+import { BarChart, ChordChart, LineChart, PieChart, RadialBar, SwarmPlot } from '../shared/index';
 
 import styles from './DashBoard.module.scss';
 

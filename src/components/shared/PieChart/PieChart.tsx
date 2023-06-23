@@ -1,9 +1,9 @@
 import { ResponsivePie } from '@nivo/pie';
 
-import { chartPieData } from '../../../../componentsData';
-import { WidgetProps } from '../../../../types/widgetTypes';
+import { chartPieData } from '../../../componentsData/index';
+import { WidgetProps } from '../../../types/widgetTypes';
 
-import styles from '../../DashBoard.module.scss';
+import styles from '../sharedStyle.module.scss';
 
 const PieChart = ({ data }: WidgetProps): JSX.Element => (
   <div style={{ height: `${data.size}` }} className={styles.container}>

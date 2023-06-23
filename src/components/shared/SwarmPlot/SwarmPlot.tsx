@@ -1,9 +1,9 @@
 import { ResponsiveSwarmPlot } from '@nivo/swarmplot';
 
-import { swarmPlotData } from '../../../../componentsData/index';
-import { WidgetProps } from '../../../../types/widgetTypes';
+import { swarmPlotData } from '../../../componentsData/index';
+import { WidgetProps } from '../../../types/widgetTypes';
 
-import styles from '../../DashBoard.module.scss';
+import styles from '../sharedStyle.module.scss';
 
 const SwarmPlot = ({ data }: WidgetProps): JSX.Element => (
   <div style={{ height: `${data.size}` }} className={styles.container}>
