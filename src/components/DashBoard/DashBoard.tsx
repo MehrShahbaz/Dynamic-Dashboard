@@ -3,6 +3,7 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
+import { displayWidgetsByRow } from '../../helper/helper';
 import { widgets } from '../../init/init';
 import { Widget, WidgetTypes } from '../../types/widgetTypes';
 import {
@@ -20,9 +21,9 @@ import styles from './DashBoard.module.scss';
 
 const DashBoard = (): JSX.Element => {
   const currentWidget = useCallback((widget: Widget, index: number): JSX.Element => {
-    const { type } = widget;
+    const { WidgetType } = widget;
 
-    switch (type) {
+    switch (WidgetType) {
       case WidgetTypes.PIE_CHART:
         return <PieChart data={widgets[index]} />;
       case WidgetTypes.CHART_LINE:
@@ -47,15 +48,23 @@ const DashBoard = (): JSX.Element => {
   return (
     <Container>
       <div className={styles.dashBoard}>
-        <Row>
-          {widgets.map(
-            (widget, index): JSX.Element => (
-              <Col key={widget.id} className={styles.widgetContainer}>
-                {currentWidget(widget, index)}
-              </Col>
-            )
-          )}
-        </Row>
+        {widgets.map((_widget, index): JSX.Element => {
+          const colWidgets = displayWidgetsByRow(widgets, index);
+
+          if (colWidgets.length > 0) {
+            return (
+              <Row>
+                {colWidgets.map(
+                  (widget): JSX.Element => (
+                    <Col>{currentWidget(widget, index)}</Col>
+                  )
+                )}
+              </Row>
+            );
+          }
+
+          return <div />;
+        })}
       </div>
     </Container>
   );

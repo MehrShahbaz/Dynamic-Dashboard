@@ -1,14 +1,9 @@
-type WidgetType =
-  | 'pieChart'
-  | 'chartLine'
-  | 'barChart'
-  | 'swarmPlot'
-  | 'radialBar'
-  | 'chordChart'
-  | 'progressBar'
-  | 'descriptionCard';
+type WidgetCol = 1 | 2 | 3 | 4;
 
-export type WIdgetType = 'sm' | 'm' | 'l' | 'xl';
+type WidgetPosition = {
+  row: number;
+  col: WidgetCol;
+};
 
 export enum WidgetTypes {
   PIE_CHART = 'pieChart',
@@ -25,12 +20,14 @@ export interface Widget {
   id: string;
   title?: string;
   priority: number;
-  type: WidgetType;
+  WidgetType: WidgetTypes;
   order: number;
-  position: string;
+  position: WidgetPosition;
   size: string;
 }
 
 export interface WidgetProps {
   data: Widget;
 }
+
+export type WidgetArray = Widget[];
