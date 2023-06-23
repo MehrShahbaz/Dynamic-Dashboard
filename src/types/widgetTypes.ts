@@ -1,8 +1,6 @@
-type WidgetCol = 1 | 2 | 3 | 4;
-
 type WidgetPosition = {
   row: number;
-  col: WidgetCol;
+  col: number;
 };
 
 export enum WidgetTypes {
