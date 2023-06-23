@@ -6,7 +6,7 @@ import { WidgetProps } from '../../../types/widgetTypes';
 import styles from '../sharedStyle.module.scss';
 
 const RadialBar = ({ data }: WidgetProps): JSX.Element => (
-  <div style={{ height: `${data.size}` }} className={styles.container}>
+  <div className={styles.container}>
     {data.title && (
       <div className={styles.titleContainer}>
         <div className={styles.title}>{data.title}</div>

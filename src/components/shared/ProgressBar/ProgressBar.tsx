@@ -3,14 +3,13 @@ import BootstrapProgressBar from 'react-bootstrap/ProgressBar';
 import { progressBarData } from '../../../componentsData/index';
 import { WidgetProps } from '../../../types/widgetTypes';
 
-import sharedStyles from '../sharedStyle.module.scss';
 import styles from './ProgressBar.module.scss';
 
 const CustomProgressBar = ({ data }: WidgetProps): JSX.Element => (
-  <div className={sharedStyles.container}>
+  <div className={styles.container}>
     {data.title && (
-      <div className={sharedStyles.titleContainer}>
-        <div className={sharedStyles.title}>{data.title}</div>
+      <div className={styles.titleContainer}>
+        <div className={styles.title}>{data.title}</div>
       </div>
     )}
     <div className={styles.rootConatiner}>
