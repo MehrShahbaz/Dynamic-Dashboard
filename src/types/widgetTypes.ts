@@ -1,4 +1,12 @@
-type WidgetType = 'pieChart' | 'chartLine' | 'barChart' | 'swarmPlot' | 'radialBar' | 'chordChart' | 'progressBar';
+type WidgetType =
+  | 'pieChart'
+  | 'chartLine'
+  | 'barChart'
+  | 'swarmPlot'
+  | 'radialBar'
+  | 'chordChart'
+  | 'progressBar'
+  | 'descriptionCard';
 
 export type WIdgetType = 'sm' | 'm' | 'l' | 'xl';
 
@@ -10,6 +18,7 @@ export enum WidgetTypes {
   RADIAL_BAR = 'radialBar',
   CHORD_CHART = 'chordChart',
   PROGRESS_BAR = 'progressBar',
+  DESCRIPTION_CARD = 'descriptionCard',
 }
 
 export interface Widget {

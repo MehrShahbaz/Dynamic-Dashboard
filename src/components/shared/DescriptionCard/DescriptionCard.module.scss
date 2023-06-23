@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  flex-direction: column;
+
+  .titleContainer {
+    width: 100%;
+    border-bottom: 1px solid;
+    .title {
+      font-size: 18px;
+      font-weight: 600;
+      padding-bottom: 10px;
+
+      span {
+        font-size: 10px;
+        font-weight: 100;
+      }
+    }
+  }
+
+  .descriptionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    .amount {
+      padding-top: 10px;
+      font-size: 18px;
+      font-weight: 400;
+      padding-bottom: 10px;
+    }
+
+    .profit{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      span {
+        display: flex;
+        align-items: center;
+        font-size: 10px;
+        font-weight: 100;
+      }
+
+      .arrowUp {
+        width: 0; 
+        height: 0; 
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        
+        border-bottom: 5px solid var(--bs-success);
+      }
+    }
+  }
+}
