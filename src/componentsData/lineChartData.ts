@@ -8,14 +8,6 @@ export const lineChartData = [
         y: 169,
       },
       {
-        x: 'helicopter',
-        y: 236,
-      },
-      {
-        x: 'boat',
-        y: 59,
-      },
-      {
         x: 'train',
         y: 72,
       },
@@ -40,14 +32,6 @@ export const lineChartData = [
         y: 170,
       },
       {
-        x: 'horse',
-        y: 295,
-      },
-      {
-        x: 'skateboard',
-        y: 136,
-      },
-      {
         x: 'others',
         y: 113,
       },
@@ -60,14 +44,6 @@ export const lineChartData = [
       {
         x: 'plane',
         y: 102,
-      },
-      {
-        x: 'helicopter',
-        y: 17,
-      },
-      {
-        x: 'boat',
-        y: 37,
       },
       {
         x: 'train',
@@ -94,14 +70,6 @@ export const lineChartData = [
         y: 117,
       },
       {
-        x: 'horse',
-        y: 199,
-      },
-      {
-        x: 'skateboard',
-        y: 7,
-      },
-      {
         x: 'others',
         y: 236,
       },
@@ -113,14 +81,6 @@ export const lineChartData = [
     data: [
       {
         x: 'plane',
-        y: 65,
-      },
-      {
-        x: 'helicopter',
-        y: 271,
-      },
-      {
-        x: 'boat',
         y: 65,
       },
       {
@@ -146,14 +106,6 @@ export const lineChartData = [
       {
         x: 'bicycle',
         y: 238,
-      },
-      {
-        x: 'horse',
-        y: 4,
-      },
-      {
-        x: 'skateboard',
-        y: 62,
       },
       {
         x: 'others',

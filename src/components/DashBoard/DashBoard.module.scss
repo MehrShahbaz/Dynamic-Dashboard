@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  background-color: #dadbdd;
+  padding: 10px;
 }
 
 .widgetContainer {
@@ -10,4 +12,5 @@
   padding: 30px 10px;
   margin: 0 20px;
   box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px;
+  background-color: #fff;
 }
